@@ -625,6 +625,10 @@ public class DDMFormEvaluatorHelper {
 
 		Object value = ddmFormField.getProperty("value");
 
+		if (Validator.isNotNull(value) && Validator.isNull(value.toString())) {
+			return false;
+		}
+		
 		if (value instanceof String) {
 			return false;
 		}
