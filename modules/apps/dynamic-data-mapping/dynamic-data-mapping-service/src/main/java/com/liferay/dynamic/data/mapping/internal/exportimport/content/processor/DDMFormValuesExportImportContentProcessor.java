@@ -652,6 +652,8 @@ public class DDMFormValuesExportImportContentProcessor
 				String valueString = value.getString(locale);
 
 				JSONObject jsonObject = null;
+				
+				System.out.println("test");
 
 				try {
 					jsonObject = _jsonFactory.createJSONObject(valueString);
