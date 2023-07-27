@@ -93,6 +93,10 @@ public class LayoutStagingHandler implements InvocationHandler, Serializable {
 
 			Object bean = _layout;
 
+			if (methodName.equals("getBreadcrumb")) {
+				_layout.setName(_layoutRevision.getName());
+			}
+
 			if (_layoutRevisionMethodNames.contains(methodName)) {
 				try {
 					Class<?> layoutRevisionClass = _layoutRevision.getClass();
